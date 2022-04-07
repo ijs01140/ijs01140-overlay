@@ -22,16 +22,7 @@ RDEPEND="
 "
 BDEPEND=""
 
-QA_PREBUILT="
-	opt/unityhub/${PN}-bin
-	opt/unityhub/libffmpeg.so
-	opt/unityhub/libvk_swiftshader.so
-	opt/unityhub/libEGL.so
-	opt/unityhub/libGLESv2.so
-	opt/unityhub/swiftshader/libEGL.so
-	opt/unityhub/swiftshader/libGLESv2.so
-	opt/unityhub/UnityLicensingClient_V1/libbindings.so
-"
+QA_PREBUILT="opt/${PN}/*"
 
 src_prepare() {
 	default
