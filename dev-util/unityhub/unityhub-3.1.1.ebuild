@@ -19,6 +19,8 @@ RESTRICT="mirror bindist"
 RDEPEND="
 	dev-libs/nss
 	x11-libs/gtk+:3
+	app-crypt/mit-krb5
+	dev-util/lttng-ust
 "
 BDEPEND=""
 
