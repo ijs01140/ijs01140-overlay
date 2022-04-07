@@ -43,7 +43,7 @@ src_install() {
 	domenu usr/share/applications/${PN}.desktop
 
 	insinto /opt/${PN}
-	doins -r usr/${PN}/.
+	doins -r opt/${PN}/.
 	fperms +x /opt/${PN}/${MY_BIN}
 	dosym -r /opt/${PN}/${MY_BIN} /usr/bin/${PN}
 
