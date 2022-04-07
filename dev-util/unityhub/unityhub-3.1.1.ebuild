@@ -23,7 +23,7 @@ RDEPEND="
 BDEPEND=""
 
 QA_PREBUILT="
-	opt/unityhub/${PN}
+	opt/unityhub/${PN}-bin
 	opt/unityhub/libffmpeg.so
 	opt/unityhub/libvk_swiftshader.so
 	opt/unityhub/libEGL.so
