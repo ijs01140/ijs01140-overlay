@@ -51,6 +51,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
+
 	optfeature "Android build support" app-arch/cpio
 	optfeature "system tray support" dev-libs/libappindicator
 }
