@@ -3,8 +3,6 @@
  
 EAPI=8
 
-MY_BIN="${PN^}"
-
 inherit desktop linux-info optfeature pax-utils unpacker
 
 DESCRIPTION="Some words here"
@@ -25,7 +23,7 @@ RDEPEND="
 BDEPEND=""
 
 QA_PREBUILT="
-	opt/unityhub/${MY_BIN}
+	opt/unityhub/${PN}
 	opt/unityhub/libffmpeg.so
 	opt/unityhub/libvk_swiftshader.so
 	opt/unityhub/libEGL.so
@@ -44,8 +42,8 @@ src_install() {
 
 	insinto /opt/${PN}
 	doins -r opt/${PN}/.
-	fperms +x /opt/${PN}/${MY_BIN}
-	dosym -r /opt/${PN}/${MY_BIN} /usr/bin/${PN}
+	fperms +x /opt/${PN}/${PN}
+	dosym -r /opt/${PN}/${PN} /usr/bin/${PN}
 
 	pax-mark -m "${ED}"/opt/${PN}/${PN}
 }
