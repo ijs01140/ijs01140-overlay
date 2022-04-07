@@ -36,10 +36,6 @@ QA_PREBUILT="
 
 src_prepare() {
 	default
-
-	sed -i \
-		-e "s:/usr/share/discord/Discord:discord:" \
-		usr/share/${MY_PN}/${MY_PN}.desktop || die
 }
 
 src_install() {
