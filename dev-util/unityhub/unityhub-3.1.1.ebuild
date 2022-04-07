@@ -3,7 +3,7 @@
  
 EAPI=8
 
-MY_BIN="${MY_PN^}"
+MY_BIN="${PN^}"
 
 inherit desktop linux-info optfeature pax-utils unpacker
 
@@ -39,15 +39,15 @@ src_prepare() {
 }
 
 src_install() {
-	doicon usr/share/icons/hicolor/1024x1024/apps/${MY_PN}.png
-	domenu usr/share/applications/${MY_PN}.desktop
+	doicon usr/share/icons/hicolor/1024x1024/apps/${PN}.png
+	domenu usr/share/applications/${PN}.desktop
 
-	insinto /opt/${MY_PN}
-	doins -r usr/${MY_PN}/.
-	fperms +x /opt/${MY_PN}/${MY_BIN}
-	dosym -r /opt/${MY_PN}/${MY_BIN} /usr/bin/${MY_PN}
+	insinto /opt/${PN}
+	doins -r usr/${PN}/.
+	fperms +x /opt/${PN}/${MY_BIN}
+	dosym -r /opt/${PN}/${MY_BIN} /usr/bin/${PN}
 
-	pax-mark -m "${ED}"/opt/${MY_PN}/${MY_PN}
+	pax-mark -m "${ED}"/opt/${PN}/${PN}
 }
 
 pkg_postinst() {
