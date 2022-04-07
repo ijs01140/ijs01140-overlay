@@ -10,7 +10,8 @@ inherit desktop linux-info optfeature pax-utils unpacker
 DESCRIPTION="Some words here"
 HOMEPAGE="https://unity3d.com/"
 SRC_URI="https://hub-dist.unity3d.com/artifactory/hub-debian-prod-local/pool/main/u/unity/unityhub_amd64/unityhub-amd64-${PV}.deb"
- 
+S="${WORKDIR}"
+
 LICENSE="Unity-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
