@@ -30,6 +30,7 @@ QA_PREBUILT="
 	opt/unityhub/libGLESv2.so
 	opt/unityhub/swiftshader/libEGL.so
 	opt/unityhub/swiftshader/libGLESv2.so
+	opt/unityhub/UnityLicensingClient_V1/libbindings.so
 "
 
 src_prepare() {
