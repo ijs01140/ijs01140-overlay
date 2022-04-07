@@ -43,6 +43,7 @@ src_install() {
 	insinto /opt/${PN}
 	doins -r opt/${PN}/.
 	fperms +x /opt/${PN}/${PN}
+	fperms +x /opt/${PN}/${PN}-bin
 	dosym -r /opt/${PN}/${PN} /usr/bin/${PN}
 
 	pax-mark -m "${ED}"/opt/${PN}/${PN}
