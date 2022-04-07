@@ -1,0 +1,11 @@
+
+<?xml version="1.0"?>
+
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>ijs01140-overlay</name>
+    <description>ijs01140's personal gentoo overlay</description>
+    <homepage>https://github.com/ijs01140/ijs01140-overlay</homepage>
+    <source type="git">https://github.com/ijs01140/ijs01140-overlay.git</source>
+  </repo>
+</repositories>
