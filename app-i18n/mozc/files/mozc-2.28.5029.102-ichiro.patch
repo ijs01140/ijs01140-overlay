@@ -1,0 +1,22 @@
+diff --git a/src/unix/emacs/mozc_emacs_helper_lib.cc b/src/unix/emacs/mozc_emacs_helper_lib.cc
+index ee6d244..dd52544 100644
+--- a/src/unix/emacs/mozc_emacs_helper_lib.cc
++++ b/src/unix/emacs/mozc_emacs_helper_lib.cc
+@@ -406,7 +406,7 @@ void PrintField(const protobuf::Message &message,
+                 const protobuf::FieldDescriptor &field,
+                 std::vector<std::string> *output) {
+   output->push_back("(");
+-  output->push_back(NormalizeSymbol(field.name()));
++  output->push_back(NormalizeSymbol(std::string(field.name())));
+ 
+   if (!field.is_repeated()) {
+     output->push_back(" . ");  // Print an object as a value.
+@@ -475,7 +475,7 @@ void PrintFieldValue(const protobuf::Message &message,
+       break;
+ 
+     case protobuf::FieldDescriptor::CPPTYPE_ENUM:  // enum
+-      output->push_back(NormalizeSymbol(GET_FIELD_VALUE(Enum)->name()));
++	output->push_back(NormalizeSymbol(std::string(GET_FIELD_VALUE(Enum)->name())));
+       break;
+ 
+     case protobuf::FieldDescriptor::CPPTYPE_STRING: {  // string
