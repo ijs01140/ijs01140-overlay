@@ -54,6 +54,7 @@ PATCHES=(
 	"${FILESDIR}/0003-Implement-glfwSetCursorPosWayland.patch"
 	"${FILESDIR}/0004-Fix-Window-size-on-unset-fullscreen.patch"
 	"${FILESDIR}/0005-Avoid-error-on-startup.patch"
+	"${FILESDIR}/0006-Avoid-error-on-startup-2.patch"
 )
 
 src_configure() {
