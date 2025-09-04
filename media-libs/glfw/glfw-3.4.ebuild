@@ -48,6 +48,13 @@ BDEPEND="
 		kde-frameworks/extra-cmake-modules
 	)
 "
+PATCHES=(
+	"${FILESDIR}/0001-Key-Modifiers-Fix.patch"
+	"${FILESDIR}/0002-Fix-duplicate-pointer-scroll-events.patch"
+	"${FILESDIR}/0003-Implement-glfwSetCursorPosWayland.patch"
+	"${FILESDIR}/0004-Fix-Window-size-on-unset-fullscreen.patch"
+	"${FILESDIR}/0005-Avoid-error-on-startup.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(
